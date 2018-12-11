@@ -1,0 +1,4 @@
+CREATE TABLE lang (id BIGINT UNIQUE AUTO_INCREMENT, shortname CHAR(3), fullname TEXT, def TINYINT(1) DEFAULT '0' NOT NULL, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE news (id BIGINT UNIQUE AUTO_INCREMENT, news_id BIGINT NOT NULL, lang_id BIGINT NOT NULL, newstitle TEXT, newsanons text, newstext text, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, INDEX lang_id_idx (lang_id), PRIMARY KEY(id)) ENGINE = INNODB;
+CREATE TABLE news_list (id BIGINT UNIQUE AUTO_INCREMENT, newsdate DATETIME NOT NULL, newspicture TEXT, created_at DATETIME NOT NULL, updated_at DATETIME NOT NULL, PRIMARY KEY(id)) ENGINE = INNODB;
+ALTER TABLE news ADD CONSTRAINT news_lang_id_news_list_id FOREIGN KEY (lang_id) REFERENCES news_list(id) ON DELETE CASCADE;

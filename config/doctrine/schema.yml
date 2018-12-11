@@ -1,0 +1,28 @@
+NewsList:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:   { type: integer, notnull: true, unique: true, primary: true, autoincrement:true }
+    newsdate:  { type: timestamp, notnull: true }
+    newspicture: { type: varchar }
+
+Lang:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:        { type: integer, notnull: true, unique: true, primary: true, autoincrement:true }
+    shortname: { type: char(3) }
+    fullname: { type: varchar }
+    def: { type: boolean, notnull: true, default: 0 }
+
+News:
+  actAs: { Timestampable: ~ }
+  columns:
+    id:        { type: integer, notnull: true, unique: true, primary: true, autoincrement:true }
+    news_id:   { type: integer, notnull: true }
+    lang_id:    { type: integer, notnull: true }
+    newstitle: { type: varchar }
+    newsanons: { type: text }
+    newstext: { type: text }
+  relations:
+    NewsList: {onDelete: CASCADE, local: news_id, foreign: id }
+    NewsList: {onDelete: CASCADE, local: lang_id, foreign: id }
+

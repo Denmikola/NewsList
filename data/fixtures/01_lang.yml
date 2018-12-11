@@ -1,0 +1,13 @@
+lang:
+  Lang1:
+    shortname : RUS
+    fullname: Русский
+    def: True
+  Lang2:
+    shortname : ENG
+    fullname: English
+  Lang3:
+    shortname : UKR
+    fullname: Украiнска
+
+

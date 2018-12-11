@@ -1,0 +1,6 @@
+newslist:
+<?php for ($i = 9; $i >= 1; $i--): ?>
+  n0<?php echo $i ?>: 
+    newsdate: '2018-0<?php echo 10-$i ?>-14 1<?php echo $i ?>:16:00'
+    newspicture: 'news0<?php echo $i ?>.png' 
+<?php endfor ?>

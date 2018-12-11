@@ -1,0 +1,21 @@
+news:
+<?php for ($i = 1; $i <= 9; $i++): ?>
+  n0<?php echo $i ?>_1: 
+    news_id: <?php echo 10-$i ?> 
+    lang_id: 1 
+    newstitle: 'Заголовок новости номер <?php echo $i ?> по русски'
+    newsanons: 'Совершенно прекрасный анонс новости номер <?php echo $i ?> по русски'
+    newstext:  'Здесь хотелось бы увидеть какой-нибудь текст относящийся к новости номер <?php echo $i ?> по русски'
+  n0<?php echo $i ?>_2: 
+    news_id: <?php echo 10-$i ?> 
+    lang_id: 2 
+    newstitle: 'Title of news number <?php echo $i ?> by English'
+    newsanons: 'This compleatly beatifully anons of news number <?php echo $i ?> by English'
+    newstext:  'In place we want see somewear text of news number <?php echo $i ?> by English'
+  n0<?php echo $i ?>_3: 
+    news_id: <?php echo 10-$i ?> 
+    lang_id: 3 
+    newstitle: 'Заголовок новини номер <?php echo $i ?> по українськи'
+    newsanons: 'Абсолютно прекрасний анонс новини номер <?php echo $i ?> по українськи'
+    newstext:  'Тут хотілося б побачити який-небудь текст що відноситься до новини номер <?php echo $i ?> по українськи'
+<?php endfor ?>
